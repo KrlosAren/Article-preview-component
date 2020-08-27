@@ -11,10 +11,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: './js/[name].[hash].js',
   },
-  devServer: {
-    port: 4500,
-    open: true,
-  },
   module: {
     rules: [
       {
@@ -47,8 +43,7 @@ module.exports = {
         test: /\.styl$/,
         use: [
           {
-            loader: 'style-loader',
-            // loader: MiniCssExtractPlugin.loader,
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: 'css-loader',
@@ -94,7 +89,7 @@ module.exports = {
       inject: true,
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: './src/style/[name].css',
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/app.*', '**/commons.*'],

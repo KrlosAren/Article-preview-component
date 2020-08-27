@@ -4,8 +4,9 @@
   "description": "![Design preview for the Article preview component coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "local": "webpack-dev-server --config ./webpack.config.js --mode development --host 192.168.0.7"
+    "start": "webpack-dev-server --config ./webpack.config.local.js --mode development",
+    "local": "webpack-dev-server --config ./webpack.config.local.js --mode development --host 192.168.0.7",
+    "build:prod": "webpack --config ./webpack.config.js --mode production"
   },
   "keywords": [],
   "author": "Carlos Lopez Z. <krlosaren@gmail.com>",
