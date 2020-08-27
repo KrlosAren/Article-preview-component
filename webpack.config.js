@@ -1,7 +1,7 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -63,14 +63,14 @@ module.exports = {
             options: {
               sourceMap: true,
               importLoaders: 1,
-            }
+            },
           },
           {
             loader: 'stylus-loader',
             options: {
               sourceMap: true,
               importLoaders: 1,
-            }
+            },
           },
         ],
       },
@@ -98,6 +98,6 @@ module.exports = {
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/app.*', '**/commons.*'],
-    })
+    }),
   ],
 };

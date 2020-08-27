@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "local": "webpack-dev-server --config ./webpack.config.js --mode development --host 0.0.0.0"
+    "local": "webpack-dev-server --config ./webpack.config.js --mode development --host 192.168.0.7"
   },
   "keywords": [],
   "author": "Carlos Lopez Z. <krlosaren@gmail.com>",
