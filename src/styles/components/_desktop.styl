@@ -1,0 +1,108 @@
+.main
+  width 100%
+  height 100vh
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  background-color color-light
+
+.container
+  max-width 680px
+  width 100%
+  height 260px
+  display flex
+  justify-content center 
+  mixin-box-shadow(4px, 4px, 20px, 1px, rgba(0,0,0,0.2))
+  
+.imagen
+  width 35%
+  height 100%
+  background-image url('../../assets/drawers.jpg')
+  background-repeat no-repeat
+  background-position left center
+  background-size cover
+
+.content
+  width 65%
+  height auto
+  padding 2em
+  background-color white
+  display flex
+  flex-direction column
+  justify-content space-around
+
+  &__title
+    width 85%
+    line-height 1.3em
+    letter-spacing 0.01em
+    mixin-typo(font-weight-700, font-13 + 5, font-marope, color-primary)
+
+  
+  &__text
+    mixin-typo(font-weight-500, font-13, font-marope, color-primary)
+
+  &__avatar
+    width 100%
+    max-height 30px
+    margin-top 20px
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-items center
+
+    &--userinfo
+      display flex
+      align-items center
+
+      img 
+        width  30px
+        height 30px
+        border-radius 50px
+
+      span
+        display flex
+        flex-direction column
+        justify-content space-around
+        margin-left 10px
+
+        h4
+          line-height 1.2em
+          mixin-typo(font-weight-700, font-13 - 1, font-marope, color-primary)
+
+        h5
+          mixin-typo(font-weight-500, font-13 - 2, font-marope, color-primary)
+
+    
+  &__share
+    width  30px
+    height 30px
+    border-radius 50%
+    color color-primary
+
+    &:hover
+      cursor pointer
+      background-color color-primary
+
+
+
+
+
+
+.code 
+  width 100%
+  height 20px
+  text-align center
+  position absolute
+  bottom 50px
+  font-family font-marope
+  font-size font-13 + 1
+  font-weigth 500
+
+  a
+    color color-primary-light
+    text-decoration none
+    font-weight font-weight-700
+
+    &:hover
+      text-decoration underline
