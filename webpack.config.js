@@ -75,7 +75,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: './src/assets/[name].[ext]',
+              name: 'assets/[name].[hash].[ext]',
             },
           },
         ],
@@ -89,7 +89,7 @@ module.exports = {
       inject: true,
     }),
     new MiniCssExtractPlugin({
-      filename: './src/style/[name].css',
+      filename: '[name].[hash].css',
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/app.*', '**/commons.*'],
