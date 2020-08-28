@@ -4,6 +4,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap",rel="stylesheet") 
     link(rel="shortcut icon", href=require("../src/assets/favicon-32x32.png").default, type="image/x-icon")
+    script(src="https://kit.fontawesome.com/90e9c9e873.js" crossorigin="anonymous" async)
     title Frontend Mentor | Article preview component
   body
     main.main
@@ -25,7 +26,15 @@ html(lang="en")
               span
                 h4.avatar--name Michelle Appleton
                 h5.avatar--date 28 Jun 2020
-            i(class='content__share fa fa-share')
+            span#button.content__button
+              i(class='fa fa-share')
+        span#share(class='content__button--share')
+          span
+            h2 Share
+            i(class='fab fa-facebook-square rrss')
+            i(class='fab fa-twitter rrss')
+            i(class='fab fa-pinterest rrss')
+
       div.code
         p
           | Challenge by 

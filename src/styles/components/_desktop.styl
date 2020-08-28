@@ -13,21 +13,25 @@
   height 260px
   display flex
   justify-content center 
+  border-radius 10px
+  background-color white
+  position relative
   mixin-box-shadow(4px, 4px, 20px, 1px, rgba(0,0,0,0.2))
   
 .imagen
   width 35%
   height 100%
-  background-image url('../../assets/drawers.jpg')
   background-repeat no-repeat
   background-position left center
+  background-image url('../../assets/drawers.jpg')
   background-size cover
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 
 .content
   width 65%
   height auto
   padding 2em
-  background-color white
   display flex
   flex-direction column
   justify-content space-around
@@ -40,22 +44,26 @@
 
   
   &__text
-    mixin-typo(font-weight-500, font-13, font-marope, color-primary)
+    width 100%
+    mixin-typo(font-weight-500, font-13 - 1, font-marope, color-primary)
 
   &__avatar
     width 100%
-    max-height 30px
+    max-height 35px
     margin-top 20px
     display flex
     flex-direction row
     justify-content space-between
     align-items center
+    position relative
 
     &--userinfo
+      height 30px
       display flex
+      justify-content start
       align-items center
 
-      img 
+      img
         width  30px
         height 30px
         border-radius 50px
@@ -73,30 +81,114 @@
         h5
           mixin-typo(font-weight-500, font-13 - 2, font-marope, color-primary)
 
-    
-  &__share
-    width  30px
+  &__button
+    width 30px
     height 30px
-    border-radius 50%
+    padding 8px
+    border-radius 50px
+    position relative
     color color-primary
+    background-color color-light
+    i 
+      display flex
+      justify-content center
+      align-items center
+      &::before
+        width  10px
+        height 10px
+        position relative
+        right 2px
+
+    &:active
+      animation clickButton 0.7s
 
     &:hover
       cursor pointer
       background-color color-primary
+      color color-light
+    
+.content__button--share
+    width 220px
+    height 60px
+    position absolute
+    bottom 95px
+    left calc(100% - 157px)
+    display none
+    border-radius 10px
+    background-color color-primary
+
+    &::before
+      content ''
+      position absolute
+      left calc(220px / 2 - 20px)
+      top 45px
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0 20px;
+      border-color: color-primary transparent transparent transparent;
+    span
+      width 70%
+      height 100%
+      margin 0 auto
+      display flex
+      justify-content space-between
+      align-items center
+
+      i
+        font-size font-13 + 7
+        color color-light
+        &:hover
+          cursor pointer
+
+      h2
+        letter-spacing 0.2em
+        text-transform uppercase
+        mixin-typo(font-weight-500, font-13 - 1, font-marope, color-primary-light)
 
 
+.onVisible
+  display block
+  animation-name onVisible
+  animation-duration 0.2s
+  animation-fill-mode both
+  animation-timing-function: ease;
+  background-color color-primary
+
+.active
+  background-color color-primary
+  color color-light
+
+@keyframes onVisible {
+  0% {
+    opacity 0
+  }
+  50% {
+    opacity 0.5
+  }
+  100% {
+    opacity 1
+  }
+}
+
+@keyframes clickButton {
+  from {
+    transform scale(0.8)
+  }
+  to {
+    transform scale(1)
+  }
+
+}
 
 
-
-
-.code 
+.code
   width 100%
   height 20px
+  margin-top 25px
   text-align center
-  position absolute
-  bottom 50px
   font-family font-marope
-  font-size font-13 + 1
+  font-size font-13
   font-weigth 500
 
   a
