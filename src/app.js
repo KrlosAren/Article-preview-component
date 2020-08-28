@@ -9,7 +9,7 @@ rrss.forEach((item) => {
     share.classList.remove('onVisible');
     button.classList.remove('active');
     button.style.backgroundColor = 'hsl(217, 19%, 35%)';
-    button.style.color = 'hsl(214, 17%, 51%)';
+    button.style.color = '#ecf2f8';
   });
 });
 
