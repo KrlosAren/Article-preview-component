@@ -2,7 +2,7 @@
 
 :memo: This is a challenge from [Frontend-Mentor](https://www.frontendmentor.io/challenges/).
 
-  The purpose of this challenge is: continue with my learn about HTML , CSS and JS
+  **The purpose of this challenge is: continues with my learn about HTML , CSS and JS**
 
 ## Start 🚀
 
